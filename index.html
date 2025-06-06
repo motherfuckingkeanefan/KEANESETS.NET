@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>...</title>
+  <title>Show Archive | Keane</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
- <h1>...</h1>
-<h2>ALMOST EVERY SHOW THEY EVER PLAYED</h2>
+ <h1>Show Archive</h1>
 
 <p class="intro">
   Welcome to the beta version of ... — our most complete and up-to-date list of Keane concert appearances.  
@@ -18,12 +17,19 @@
 </p>
 
 
-  <input
-    type="text"
-    id="searchInput"
-    placeholder="Search by date, venue, city, or country..."
-    aria-label="Search shows"
-  />
+<div id="searchAndSort">
+  <input type="text" id="searchInput" placeholder="SEARCH VENUE, YEAR..." aria-label="Search shows" />
+  <div id="sortButtons">
+    <button id="sortOldest">Oldest</button>
+    <button id="sortRecent">Recent</button>
+    <button id="sortAZ">A-Z</button>
+    <button id="sortZA">Z-A</button>
+  </div>
+</div>
+
+
+
+
   <table id="showsTable">
     <thead>
       <tr>
@@ -628,7 +634,13 @@
 <tr><td data-label="Date">04 Apr 2012</td><td data-label="Venue">Arena Moscow</td><td data-label="City">Moscow</td><td data-label="Country">Russia</td></tr>
 <tr><td data-label="Date">06 Apr 2012</td><td data-label="Venue">Yubileniey Arena</td><td data-label="City">St Petersburg</td><td data-label="Country">Russia</td></tr>
 <tr><td data-label="Date">21 Apr 2012</td><td data-label="Venue">Rough Trade East</td><td data-label="City">London</td><td data-label="Country">UK</td></tr>
+<tr><td data-label="Date">27 Apr 2012</td><td data-label="Venue">St Martin's College</td><td data-label="City">London</td><td data-label="Country">UK</td></tr>
+<tr><td data-label="Date">07 May 2012</td><td data-label="Venue">BBC Radio Theatre</td><td data-label="City">London</td><td data-label="Country">UK</td></tr>
+
 <tr><td data-label="Date">15 May 2012</td><td data-label="Venue">Casino de Paris</td><td data-label="City">Paris</td><td data-label="Country">France</td></tr>
+<tr><td data-label="Date">16 May 2012</td><td data-label="Venue">TMN Ao Vivo</td><td data-label="City">Lisbon</td><td data-label="Country">Portugal</td></tr>
+
+<tr><td data-label="Date">17 May 2012</td><td data-label="Venue">40 Café</td><td data-label="City">Madrid</td><td data-label="Country">Spain</td></tr>
 <tr><td data-label="Date">23 May 2012</td><td data-label="Venue">O2 Academy</td><td data-label="City">Newcastle</td><td data-label="Country">UK</td></tr>
 <tr><td data-label="Date">24 May 2012</td><td data-label="Venue">O2 Academy</td><td data-label="City">Glasgow</td><td data-label="Country">UK</td></tr>
 <tr><td data-label="Date">25 May 2012</td><td data-label="Venue">O2 Academy</td><td data-label="City">Birmingham</td><td data-label="Country">UK</td></tr>
