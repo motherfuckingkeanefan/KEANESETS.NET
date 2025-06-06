@@ -126,4 +126,19 @@ tr td:first-child {
   }
 }
 
+/* === Links === */
+a {
+  color: #000;
+  text-decoration: underline;
+  font-weight: bold;
+}
 
+a:hover {
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+thead {
+  display: none;
+}
