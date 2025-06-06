@@ -13,13 +13,45 @@ h1, h2 {
   margin-bottom: 0.5em;
 }
 
-input[type="text"] {
-  display: block;
-  width: 100%;
+/* Container for search input and buttons */
+#searchAndSort {
+  display: flex;
+  align-items: stretch; /* children fill height */
+  gap: 1em;
+  margin: 2em 0 1em 0;
+}
+
+#searchInput {
+  flex-grow: 1;
   padding: 0.7em;
   font-size: 1em;
-  margin: 2em 0;
   box-sizing: border-box;
+  height: 2.8em; /* fixed height for consistent sizing */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#sortButtons {
+  display: flex;
+  gap: 0.5em;
+}
+
+#sortButtons button {
+  padding: 0 1em;
+  font-size: 1em;
+  cursor: pointer;
+  border: 1px solid #000;
+  background: transparent;
+  color: #000;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  height: 100%; /* match container height (same as input) */
+  box-sizing: border-box;
+}
+
+#sortButtons button:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 table {
