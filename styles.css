@@ -1,34 +1,50 @@
-body {
-  font-family: Georgia, serif;
-  background: #ffffff;
+/* === Global reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: system-ui, sans-serif;
+  background: #fff;
   color: #000;
-  margin: 2em auto;
-  padding: 0 1em;
-  max-width: 800px;
+  font-size: 16px;
   line-height: 1.6;
+  padding: 2em 1em;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-h1, h2 {
+/* === Headers === */
+h1, h2, h3 {
+  font-weight: bold;
   text-align: center;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
+  line-height: 1.2;
 }
 
-/* Container for search input and buttons */
+/* === Intro paragraph === */
+.intro {
+  margin-bottom: 2em;
+  font-size: 1em;
+}
+
+/* === Search + Sort === */
 #searchAndSort {
   display: flex;
-  align-items: stretch; /* children fill height */
-  gap: 1em;
-  margin: 2em 0 1em 0;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-bottom: 2em;
 }
 
 #searchInput {
-  flex-grow: 1;
-  padding: 0.7em;
+  flex: 1;
+  padding: 0.5em;
+  border: 2px solid #000;
+  background: #fff;
+  color: #000;
   font-size: 1em;
-  box-sizing: border-box;
-  height: 2.8em; /* fixed height for consistent sizing */
-  border: 1px solid #ccc;
-  border-radius: 4px;
 }
 
 #sortButtons {
@@ -37,77 +53,77 @@ h1, h2 {
 }
 
 #sortButtons button {
-  padding: 0 1em;
-  font-size: 1em;
-  cursor: pointer;
-  border: 1px solid #000;
-  background: transparent;
+  padding: 0.5em 1em;
+  border: 2px solid #000;
+  background: #fff;
   color: #000;
-  border-radius: 4px;
-  transition: background-color 0.2s ease, color 0.2s ease;
-  height: 100%; /* match container height (same as input) */
-  box-sizing: border-box;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 #sortButtons button:hover {
-  background-color: #000;
+  background: #000;
   color: #fff;
 }
 
+/* === Table Styling === */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 2em 0;
-  table-layout: auto;
-  word-wrap: break-word;
+  margin-top: 2em;
 }
 
-caption {
+thead {
+  display: none;
+}
+
+tbody tr {
+  border-bottom: 2px solid #000;
+}
+
+td {
+  padding: 0.75em 0;
+  display: block;
   font-weight: bold;
-  text-align: left;
-  margin-bottom: 1em;
 }
 
-th, td {
-  border: 1px solid #ccc;
-  padding: 0.75em;
-  text-align: left;
-  vertical-align: top;
+td::before {
+  content: attr(data-label) ": ";
+  display: inline-block;
+  width: 6em;
+  font-weight: bold;
+  color: #444;
 }
 
-tr:nth-child(even) {
-  background-color: white;
+tr td:first-child {
+  font-weight: bold;
+  color: #000;
 }
 
-@media (max-width: 600px) {
-  table, thead, tbody, th, td, tr {
-    display: block;
+/* Desktop View */
+@media (min-width: 600px) {
+  table {
+    display: table;
   }
 
-  td {
-    padding-left: 50%;
-    position: relative;
+  thead {
+    display: table-header-group;
   }
 
-  td:before {
-    content: attr(data-label);
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-weight: bold;
-    padding-right: 1em;
+  tr {
+    display: table-row;
   }
 
-  th {
-    display: none;
+  td, th {
+    display: table-cell;
+    padding: 1em;
+    text-align: left;
+    border: none;
+  }
+
+  td::before {
+    content: none;
   }
 }
 
-footer {
-  text-align: center;
-  font-size: 0.9em;
-  color: #666;
-  margin: 4em 0 2em 0;
-  border-top: 1px solid #ddd;
-  padding-top: 1em;
-}
+
