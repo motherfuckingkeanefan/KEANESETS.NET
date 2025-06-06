@@ -43,3 +43,4 @@ document.getElementById("sortOldest").addEventListener("click", () => sortTable(
 document.getElementById("sortRecent").addEventListener("click", () => sortTable("date", false));
 document.getElementById("sortAZ").addEventListener("click", () => sortTable("venue", true));
 document.getElementById("sortZA").addEventListener("click", () => sortTable("venue", false));
+
